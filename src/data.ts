@@ -2,7 +2,7 @@ export const profile = {
   name: 'Arundhati Devi R',
   role: 'QA Automation Engineer',
   location: 'Kerala, India',
-  email: 'hello@example.com', // Replace with your preferred contact email.
+  email: 'arundhatidevi24@gmail.com', // Replace with your preferred contact email.
   github: 'https://github.com/Itsarundhati',
   linkedin: 'https://linkedin.com/in/arundhati-devi-r/',
   intro:

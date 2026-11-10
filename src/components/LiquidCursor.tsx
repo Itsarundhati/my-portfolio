@@ -27,14 +27,12 @@ export default function LiquidCursor() {
 
     let angle = 0;
     let stretch = 0;
-    let visible = false;
     let frame = 0;
 
     const handleMove = (event: MouseEvent) => {
       targetX = event.clientX;
       targetY = event.clientY;
 
-      visible = true;
       blob.classList.add("is-visible");
 
       const target = event.target as HTMLElement;
@@ -45,7 +43,6 @@ export default function LiquidCursor() {
     };
 
     const handleLeave = () => {
-      visible = false;
       blob.classList.remove("is-visible", "is-hovering");
       label.classList.remove("is-visible");
     };
