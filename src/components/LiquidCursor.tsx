@@ -72,7 +72,7 @@ export default function LiquidCursor() {
 
       // Elastic stretch and gentle recovery
       const targetStretch = Math.min(speed / 12, 1);
-      stretch += (targetStretch - stretch) * 1.5;
+      stretch += (targetStretch - stretch) * 0.15;
 
       // Organic liquid wobble
       const time = performance.now() * 0.001;
