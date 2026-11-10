@@ -1,0 +1,204 @@
+
+/* Hide the normal cursor when the custom cursor is active */
+html.has-liquid-cursor,
+html.has-liquid-cursor * {
+  cursor: none !important;
+}
+
+.liquid-cursor-container {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+/* Main organic blob */
+.liquid-blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 27px;
+  height: 27px;
+  border-radius: 42% 58% 63% 37% / 43% 40% 60% 57%;
+ background: radial-gradient(
+  circle at 35% 30%,
+  #e6f2ce,
+  #9fc94d 48%,
+  #789f35
+);
+
+box-shadow:
+  0 0 16px rgba(159, 201, 77, 0.35),
+  inset 3px 3px 7px rgba(255,255,255,0.65),
+  inset -3px -4px 8px rgba(90,120,40,0.18);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    width 0.35s ease,
+    height 0.35s ease,
+    border-radius 0.4s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.liquid-blob.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Hover over a project */
+.liquid-blob.is-hovering {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 30px rgba(232, 157, 177, 0.35),
+    inset 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+/* Hover label */
+.liquid-cursor-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   color: #26351A;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: scale(0.75);
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
+
+.liquid-cursor-label.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Tiny droplets following the cursor */
+.liquid-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e9a9b9;
+  box-shadow: 0 0 8px rgba(233, 169, 185, 0.2);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.dot-two,
+.dot-four,
+.dot-six {
+  width: 5px;
+  height: 5px;
+}
+
+.dot-three,
+.dot-seven {
+  width: 4px;
+  height: 4px;
+}
+
+.dot-eight {
+  width: 3px;
+  height: 3px;
+}
+
+
+.liquid-cursor-container {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.liquid-blob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+
+  border-radius: 62% 38% 45% 55% / 45% 55% 45% 55%;
+
+  background: radial-gradient(
+    circle at 35% 30%,
+    #e6f2ce,
+    #9FC94D 55%,
+    #789f35
+  );
+
+  box-shadow:
+    0 0 20px rgba(159, 201, 77, 0.3),
+    inset 4px 4px 8px rgba(255, 255, 255, 0.55),
+    inset -4px -5px 9px rgba(70, 100, 30, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  will-change: transform;
+
+  transition:
+    opacity 0.2s ease,
+    width 0.35s ease,
+    height 0.35s ease,
+    border-radius 0.4s ease;
+}
+
+.liquid-blob.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.liquid-blob.is-hovering {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.liquid-cursor-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #26351A;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.25s ease;
+}
+
+.liquid-cursor-label.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+html.has-liquid-cursor,
+html.has-liquid-cursor * {
+  cursor: none !important;
+}
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .liquid-cursor-container {
+    display: none;
+  }
+
+  html.has-liquid-cursor,
+  html.has-liquid-cursor * {
+    cursor: auto !important;
+  }
+}
