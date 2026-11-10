@@ -109,9 +109,6 @@ function App() {
           <div className="ambient-orbit ambient-orbit-three" />
         </div>
 
-        <div className="ambient-orb ambient-orb-one" aria-hidden="true" />
-        <div className="ambient-orb ambient-orb-two" aria-hidden="true" />
-
         <div className="top-strip">
           <span>INDEPENDENTLY CURIOUS. QUALITY OBSESSED.</span>
           <span className="top-strip-right">
